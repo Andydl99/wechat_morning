@@ -4,7 +4,7 @@ module.exports = {
   // 测试号秘钥
   secret: "b67648dc6ccd2980d6c3303d0d14517d",
   // 发给某个用户
-  touser: "oUMh-6avyG6rvvDUXYWaZDuIVYNQ",
+  touser: "oUMh-6fifQWxlEgGRRHb661F90N0",
   // 测试号模板id
   template_id: "ZsC8bw9N9Kq-w5_RW-6uAaBIbUXLSTysBkQCQ4r1N5E",
   // 天行数据key
