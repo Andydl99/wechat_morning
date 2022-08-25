@@ -8,11 +8,11 @@ const {
   getWeather,
   getConstellation,
   getMoringInfo,
-  formatData
+  formatData,
 } = require("./src/middleware/index");
 
 // 獲取token
-app.use(getToken)
+app.use(getToken);
 
 // 獲取天氣
 app.use(getWeather);
@@ -26,16 +26,11 @@ app.use(getMoringInfo);
 // 數據格式化
 app.use(formatData);
 
-
 // 發送測試消息
 app.use(weChart)
-app.use(async (ctx, next) => {
 
-  ctx.body = {
-    morning: ctx.morning,
-    constellation: ctx.constellation,
-    weather: ctx.weather,
-  };
+app.use(async (ctx, next) => {
+  ctx.body = ctx.weChartMessage;
   await next();
 });
 

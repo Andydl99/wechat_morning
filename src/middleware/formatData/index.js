@@ -1,47 +1,55 @@
+const { getBirthday,randomHexColor } = require("../../utils");
 async function formatData(ctx, next) {
-  const { weather, morning, constellation } = ctx;
+  const { weather, morning, english } = ctx;
   const weChartMessage = {
     // 最低溫
     low: {
       value: `${weather.tempMin}°`,
-      color: `#9ff`,
+      color: randomHexColor(),
     },
     // 最高溫
     high: {
       value: `${weather.tempMax}°`,
-      color: `#694`,
+      color: randomHexColor(),
     },
+   
     // 日期
-    day: {
-      value: `${weather.fxDate}`,
-      color: `#3366FF`,
-    },
-    // 星期
     week: {
-      value: `${weather.week}`,
-      color: `#448`,
+      value: `${weather.fxDate} ${weather.week} `,
+      color: randomHexColor(),
     },
-    textNight: {
-      value: `${weather.textNight}`,
-      color: `#f49`,
+    textDay: {
+      value: `${weather.textDay}`,
+      color: randomHexColor(),
     },
     city: {
       value: `杭州市-萧山区`,
-      color: `#669`,
+      color: randomHexColor(),
     },
-    //星座描述
-    constellation: {
-      value: `${constellation.grade}${constellation.content}`,
-      color: `#990`,
-    },
+    // //星座描述
+    // constellation: {
+    //   value: `${constellation.grade}${constellation.content}`,
+    //   color: `#ff3b06`,
+    // },
     // 早安心語
     morning: {
       value: `${morning.content}`,
-      color: `#3366FF`,
+      color: randomHexColor(),
     },
+    birthday:{
+      value:`${getBirthday()}`,
+      color:randomHexColor()
+    }, 
+    en:{
+      value:english.en,
+      color:randomHexColor()
+    },
+    zh:{
+      value:english.zh,
+      color:randomHexColor()
+    }
   };
   ctx.weChartMessage = weChartMessage;
-  console.log(weChartMessage);
   await next();
 }
 

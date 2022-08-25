@@ -6,7 +6,7 @@ module.exports = {
   // 发给某个用户
   touser: "oUMh-6avyG6rvvDUXYWaZDuIVYNQ",
   // 测试号模板id
-  template_id: "5TOXuqM4NB3BxAX-lwYOAAE0laWVkz5WxA8Ns18msmM",
+  template_id: "ZsC8bw9N9Kq-w5_RW-6uAaBIbUXLSTysBkQCQ4r1N5E",
   // 天行数据key
   tianapi_key: "658ce3274ec1757ca72b99f527969fe3",
   //   和风天气key
