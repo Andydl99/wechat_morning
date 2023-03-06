@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "up": "nodemon app.js ",
-    "build":"node ./rollup-build.js && node ./dist/app.js",
+    "build": "node ./rollup-build.js && node ./dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,7 +15,8 @@
     "@babel/runtime": "^7.18.9",
     "axios": "^0.27.2",
     "koa": "^2.13.4",
-    "nodemon": "^2.0.19"
+    "node-schedule": "^2.1.1",
+    "nodemon": "^2.0.21"
   },
   "devDependencies": {
     "@babel/core": "^7.18.13",
